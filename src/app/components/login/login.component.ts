@@ -29,6 +29,9 @@ this.router.navigate(['bienvenido'])
  }
     } catch (error) {
       console.log(error);
+
+      this.router.navigate(['error'])     
+
     }
   }
 }
