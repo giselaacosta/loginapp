@@ -26,11 +26,14 @@ export class LoginComponent implements OnInit {
       if (user) {
 
 this.router.navigate(['bienvenido'])     
+ }else
+ {
+  this.router.navigate(['error'])  
  }
     } catch (error) {
       console.log(error);
 
-      this.router.navigate(['error'])     
+       
 
     }
   }

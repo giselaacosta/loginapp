@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bienvenido',
   templateUrl: './bienvenido.component.html',
   styleUrls: ['./bienvenido.component.css']
 })
-export class BienvenidoComponent implements OnInit {
+export class BienvenidoComponent  {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  async mostrarPaises()
+  {
+
+    this.router.navigate(['/listadopaises'])   
+
   }
 
 }

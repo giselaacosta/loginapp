@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  urlPaises:"https://restcountries.eu/rest/v2/",
   firebaseConfig : {
     apiKey: "AIzaSyCbkgAKcGN8xr1zWL2xNEzff3NNruri7_4",
     authDomain: "login-ng-25a71.firebaseapp.com",

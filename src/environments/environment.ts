@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  urlPaises:"https://restcountries.eu/rest/v2/",
    firebaseConfig : {
     apiKey: "AIzaSyCbkgAKcGN8xr1zWL2xNEzff3NNruri7_4",
     authDomain: "login-ng-25a71.firebaseapp.com",
@@ -13,6 +14,7 @@ export const environment = {
     messagingSenderId: "1057996606863",
     appId: "1:1057996606863:web:6d69320e5a2e8c67320ffa"
   },
+  
 };
 
 /*

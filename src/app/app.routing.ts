@@ -5,6 +5,7 @@ import { BienvenidoComponent } from "./components/bienvenido/bienvenido.componen
 import { ErrorComponent } from "./components/error/error.component";
 import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
+import { ListadopaisesComponent } from "./components/listadopaises/listadopaises.component";
 
 const appRoutes = [
     {
@@ -16,7 +17,8 @@ const appRoutes = [
   { path: "bienvenido", component: BienvenidoComponent, pathMatch: "full" },
   { path: "error", component: ErrorComponent, pathMatch: "full" },
   { path: "register", component: RegisterComponent, pathMatch: "full" },
-  { path: "home", component: HomeComponent, pathMatch: "full" }
+  { path: "home", component: HomeComponent, pathMatch: "full" },
+  { path: "listadopaises", component: ListadopaisesComponent, pathMatch: "full" }
 
 ];
 export const routing = RouterModule.forRoot(appRoutes);
