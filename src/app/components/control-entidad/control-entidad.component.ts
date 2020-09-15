@@ -14,8 +14,10 @@ export class ControlEntidadComponent {
 
   ngOnInit() {
     this.miServicio.obtenerPersonas().subscribe((personas:any) => {
-    console.log(personas);
+      
+
       this.listadoPersonas = personas;
+      console.log(this.listadoPersonas);
     }, error => {
       console.log('Error');
     });
@@ -23,7 +25,6 @@ export class ControlEntidadComponent {
   personaSeleccionada(persona){
 
     this.personaseleccionada=persona;
-   console.log(this.personaseleccionada);
 
   }
 }

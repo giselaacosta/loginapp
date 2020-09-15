@@ -19,6 +19,6 @@ export class ListadoEntidadComponent  {
   }
   verPersona(persona){
     this.emitirverpersonas.emit(persona);
-  //  console.log(persona);
+ 
       }
 }

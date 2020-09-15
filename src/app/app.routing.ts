@@ -24,7 +24,7 @@ const appRoutes = [
   { path: "home", component: HomeComponent, pathMatch: "full" },
   { path: "listadopaises", component: ListadopaisesComponent, pathMatch: "full" },
   { path: "detallepais", component: DetallepaisComponent, pathMatch: "full" },
-  { path: "control-entidad", component: ControlEntidadComponent, pathMatch: "full" },
+  { path: "entidad/listado", component: ControlEntidadComponent, pathMatch: "full" },
   { path: "listado-entidad", component: ListadoEntidadComponent, pathMatch: "full" },
   { path: "detalle-entidad", component: DetalleEntidadComponent, pathMatch: "full" },
   { path: "boton-entidad", component: BotonEntidadComponent, pathMatch: "full" }

@@ -6,11 +6,14 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./detallepais.component.css']
 })
 export class DetallepaisComponent implements OnInit {
-  @Input() pais:{name:'',flag:''};
-  constructor() { 
+  @Input() pais;
+  //:{name:'',flag:''};
+  constructor() {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   this.pais= {name:'',flag:''};
+
   }
 
 }

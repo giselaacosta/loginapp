@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit,Input} from '@angular/core';
 import { Persona } from 'src/app/clases/persona';
 
 @Component({
@@ -7,10 +7,15 @@ import { Persona } from 'src/app/clases/persona';
   styleUrls: ['./detalle-entidad.component.css']
 })
 export class DetalleEntidadComponent implements OnInit {
-  @Input() persona:any;
-  constructor() { }
+
+  @Input() persona;
+  //:{name:'',flag:''};
+  constructor() {
+  }
 
   ngOnInit() {
+    console.log(this.persona);
+   this.persona= {Apellido:'',Nombre:''};
 
   }
 
