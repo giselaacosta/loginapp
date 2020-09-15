@@ -6,7 +6,11 @@ import { ErrorComponent } from "./components/error/error.component";
 import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { ListadopaisesComponent } from "./components/listadopaises/listadopaises.component";
-
+import { DetallepaisComponent } from "./components/detallepais/detallepais.component";
+import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
+import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
+import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
+import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.component';
 const appRoutes = [
     {
         path: '',
@@ -18,7 +22,11 @@ const appRoutes = [
   { path: "error", component: ErrorComponent, pathMatch: "full" },
   { path: "register", component: RegisterComponent, pathMatch: "full" },
   { path: "home", component: HomeComponent, pathMatch: "full" },
-  { path: "listadopaises", component: ListadopaisesComponent, pathMatch: "full" }
-
+  { path: "listadopaises", component: ListadopaisesComponent, pathMatch: "full" },
+  { path: "detallepais", component: DetallepaisComponent, pathMatch: "full" },
+  { path: "control-entidad", component: ControlEntidadComponent, pathMatch: "full" },
+  { path: "listado-entidad", component: ListadoEntidadComponent, pathMatch: "full" },
+  { path: "detalle-entidad", component: DetalleEntidadComponent, pathMatch: "full" },
+  { path: "boton-entidad", component: BotonEntidadComponent, pathMatch: "full" }
 ];
 export const routing = RouterModule.forRoot(appRoutes);

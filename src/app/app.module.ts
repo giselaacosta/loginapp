@@ -1,7 +1,7 @@
 import { environment } from './../environments/environment';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { routing } from "./app.routing";
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { ListadopaisesComponent } from './components/listadopaises/listadopaises.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import {PaisesService} from '../app/services/paises.service';
+import { DetallepaisComponent } from './components/detallepais/detallepais.component';
+import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
+import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
+import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
+import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.component';
 
 
 @NgModule({
@@ -28,7 +34,12 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     RegisterComponent,
-    ListadopaisesComponent
+    ListadopaisesComponent,
+    DetallepaisComponent,
+    ControlEntidadComponent,
+    ListadoEntidadComponent,
+    DetalleEntidadComponent,
+    BotonEntidadComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +50,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
+  providers: [PaisesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,11 @@
+
 <table class="table table-striped" class="mat-elevation-z8" style="width:100% ;padding:10px;">
 <thead>
     <tr>
         <th style="text-align:left;">Nombre</th>
         <th style="text-align:left;">Region</th>
         <th style="text-align:left;">Bandera</th>
+        <th style="text-align:left;"></th>
 
     </tr>
 </thead>
@@ -13,5 +15,9 @@
      <td style="width: 40%;">
     <img [src]="pais.flag" alt="" style="width: 50px;height: 50px;">
 </td>
+<td style="width: 20%;">
+    <button (click)="verPais(pais)">Ver</button>
+    </td>
+
  </tbody>
 </table>

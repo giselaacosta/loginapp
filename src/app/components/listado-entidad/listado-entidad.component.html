@@ -1,0 +1,23 @@
+
+<table class="table table-striped" class="mat-elevation-z8" style="width:70% ;padding:10px;">
+    <thead>
+        <tr>
+            <th style="text-align:left;">Apellido</th>
+            <th style="text-align:left;">Nombre</th>
+            <th style="text-align:left;">FechaNacimiento</th>
+            
+            <th style="text-align:left;">Ver Detalle persona</th>
+
+        </tr>
+    </thead>
+     <tbody *ngFor="let persona of listadoPersonas">
+         <td style="width: 30%;">{{persona.Apellido}}</td>
+         <td style="width: 30%;">{{persona.Nombre}}</td>
+         <td style="width: 30%;">{{persona.FechaNac}}</td>
+
+       
+         <td style="width: 30%;"><button (click)="verPersona(persona)">Ver</button></td>
+
+     </tbody>
+    </table>
+    

@@ -1,3 +1,19 @@
-<body>
-<img src="assets/fondo.jpg">
-</body>
+<div>
+<div style="width: 70%; float:left">
+
+
+
+<app-listadopaises [listadoPaises]="listadoPaises" (emitirverpais)="paisSeleccionado($event)">
+  
+</app-listadopaises>
+</div>
+
+<div class="div-usuario" style="width: 30%;float:right">
+ 
+    <app-detallepais [pais]="paisseleccionado">
+    
+    </app-detallepais>
+</div>
+
+    </div>
+

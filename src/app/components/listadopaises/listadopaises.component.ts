@@ -1,26 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import {PaisesService} from '../../services/paises.service';
+import { Component, OnInit, Input,Output ,EventEmitter} from '@angular/core';
 @Component({
   selector: 'app-listadopaises',
   templateUrl: './listadopaises.component.html',
   styleUrls: ['./listadopaises.component.css']
 })
-export class ListadopaisesComponent implements OnInit {
+export class ListadopaisesComponent {
 
-
-  listadoPaises=[];
-
-  constructor(private miServicio:PaisesService) { }
+@Input() listadoPaises=[];
+//@Input() 
+@Output() emitirverpais:EventEmitter<any>=new EventEmitter();
+  constructor() { }
 
 
 
   ngOnInit(){
-    this.miServicio.obtenerPaises().subscribe((paises:any)=>{
+   // console.log(this.mivariable);
+ 
 
-      console.log(paises);
-      this.listadoPaises=paises;
-    });
-
+  }
+  verPais(pais){
+this.emitirverpais.emit(pais);
   }
 
 }

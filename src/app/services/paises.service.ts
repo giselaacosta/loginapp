@@ -6,12 +6,15 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class PaisesService {
-  private url= environment.urlPaises;
-
+  private urlpaises= environment.urlPaises;
+  private urlpersonas= environment.urlPersonas;
   constructor(private http:HttpClient) { }
 
   public obtenerPaises(){
-    return this.http.get(this.url);
+    return this.http.get(this.urlpaises);
+  }
+  public obtenerPersonas(){
+    return this.http.get(this.urlpersonas);
   }
  
 }
