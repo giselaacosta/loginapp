@@ -16,5 +16,10 @@ export class BienvenidoComponent  {
     this.router.navigate(['/listadopaises'])   
 
   }
+  async mostrarPersonas()
+  {
 
+    this.router.navigate(['entidad/listado'])   
+
+  }
 }

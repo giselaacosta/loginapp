@@ -1,4 +1,4 @@
-import { Component, OnInit,Input} from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 import { Persona } from 'src/app/clases/persona';
 
 @Component({
@@ -7,9 +7,11 @@ import { Persona } from 'src/app/clases/persona';
   styleUrls: ['./detalle-entidad.component.css']
 })
 export class DetalleEntidadComponent implements OnInit {
-
+  personaseleccionada;
   @Input() persona;
   //:{name:'',flag:''};
+  @Output() emitirborrarpersona:EventEmitter<any>=new EventEmitter();
+
   constructor() {
   }
 
@@ -18,5 +20,13 @@ export class DetalleEntidadComponent implements OnInit {
    this.persona= {Apellido:'',Nombre:''};
 
   }
+  borrarPersona(persona){
+    this.emitirborrarpersona.emit(persona);
+    console.log(persona);
+      }
+      personaSeleccionada(persona){
 
+        this.personaseleccionada=persona;
+    
+      }
 }

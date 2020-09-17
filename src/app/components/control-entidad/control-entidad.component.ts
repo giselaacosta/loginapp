@@ -17,7 +17,9 @@ export class ControlEntidadComponent {
       
 
       this.listadoPersonas = personas;
-      console.log(this.listadoPersonas);
+      localStorage.setItem('listapersonas', JSON.stringify(this.listadoPersonas));   
+
+     // console.log(this.listadoPersonas);
     }, error => {
       console.log('Error');
     });
