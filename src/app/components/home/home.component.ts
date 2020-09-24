@@ -10,9 +10,12 @@ export class HomeComponent implements OnInit {
   titulopaises="titulo paises";
   listadoPaises=[];
   paisseleccionado;
+  mostrandoIf: boolean;
+
   constructor(private miServicio:PaisesService) { }
 
   ngOnInit() {
+    this.mostrandoIf = false;
     this.miServicio.obtenerPaises().subscribe((paises: any) => {
       console.log(paises);
       console.log('console log dentro del observable');
@@ -23,9 +26,11 @@ export class HomeComponent implements OnInit {
     console.log('console log despues del observable');
   }
   paisSeleccionado(pais){
-
-    console.log(pais);
+    this.mostrandoIf = true;
+    //console.log(pais);
     this.paisseleccionado=pais;
+
+
   }
 
 }

@@ -2,16 +2,21 @@
 <div>
     <div style="width: 70%; float:left">
     
-    
+    <h1>Listado Total</h1>
 <app-listado-entidad [listadoPersonas]="listadoPersonas" 
 (emitirverpersonas)="personaSeleccionada($event)" >
 
 </app-listado-entidad>
+<h1>Listado Borrados</h1>
+<app-listado-entidad [listadoBorrados]="listadoBorrados"
+(emitirverpersonas)="personaSeleccionada($event)" >
+
+</app-listado-entidad>
 </div>
-<div style="width: 30%;float:right">
+<div *ngIf="mostrandoIf" style="width: 30%; float:right">
     <app-detalle-entidad [persona]="personaseleccionada">
     </app-detalle-entidad>
  
 </div>
 
-    </div>
+</div>

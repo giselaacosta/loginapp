@@ -37,5 +37,14 @@ this.router.navigate(['bienvenido'])
 
     }
   }
+
+  botonAutocompletar(){
+ 
+   this.loginForm = new FormGroup({
+    email: new FormControl('gise@gmail.com'),
+    password: new FormControl('123456'),
+  });
+   console.log( this.loginForm.value );  
+  }
 }
 

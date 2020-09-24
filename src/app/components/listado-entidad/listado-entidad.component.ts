@@ -9,16 +9,18 @@ import { Persona } from 'src/app/clases/persona';
 export class ListadoEntidadComponent  {
 
   @Input() listadoPersonas=[];
+  @Input() listadoBorrados=[];
 
 
   @Output() emitirverpersonas:EventEmitter<any>=new EventEmitter();
-
+  mostrandoIf: boolean;
   constructor() { }
 
   ngOnInit(){
+    
   }
   verPersona(persona){
     this.emitirverpersonas.emit(persona);
- 
+
       }
 }

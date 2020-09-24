@@ -4,7 +4,7 @@
   </app-listadopaises>
 </div>
 <div class="div-usuario" style="width: 30%;float:right">
- <app-detallepais [pais]="paisseleccionado">
+ <app-detallepais *ngIf="mostrandoIf" [pais]="paisseleccionado">
      </app-detallepais>
 </div>
  </div>

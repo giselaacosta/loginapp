@@ -16,8 +16,18 @@
          <td style="width: 30%;">{{persona.FechaNac}}</td>
 
        
-         <td style="width: 30%;"><button (click)="verPersona(persona)">Ver</button></td>
+         <td style="width: 10%;"><button (click)="verPersona(persona)">Ver</button></td>
 
      </tbody>
+     <tbody *ngFor="let persona of listadoBorrados">
+        <td style="width: 30%;">{{persona.Apellido}}</td>
+        <td style="width: 30%;">{{persona.Nombre}}</td>
+        <td style="width: 30%;">{{persona.FechaNac}}</td>
+        <td style="width: 10%;"><button (click)="verPersona(persona)">Ver</button></td>
+
+      
+
+    </tbody>
     </table>
+    
     

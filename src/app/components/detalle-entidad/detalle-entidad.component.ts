@@ -16,13 +16,13 @@ export class DetalleEntidadComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.persona);
-   this.persona= {Apellido:'',Nombre:''};
+  //   console.log(this.persona);
+  //  this.persona= {Apellido:'',Nombre:''};
 
   }
   borrarPersona(persona){
     this.emitirborrarpersona.emit(persona);
-    console.log(persona);
+    // console.log(persona);
       }
       personaSeleccionada(persona){
 

@@ -4,10 +4,10 @@
     <div class="card">
       <div class="card-body">
         <h1 class="text-center">LOGIN</h1>
-        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <form [formGroup]="loginForm" >
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" formControlName="email" />
+            <input type="email"  class="form-control" formControlName="email" />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
@@ -18,8 +18,11 @@
               autocomplete="on"
             />
           </div>
-          <button class="btn btn-primary btn-lg btn-block">
+          <button class="btn btn-primary btn-lg btn-block"   (click)="onLogin()" >
             Login
+          </button>
+          <button class="btn btn-primary btn-lg btn-block" (click)="botonAutocompletar()">
+            Tester
           </button>
         </form>
         <div class="form-group mt-3">
@@ -27,7 +30,7 @@
         </div>
         <div class="form-group mt-3">
            <p>
-            Create an account ? <a [routerLink]="['/register']"> Register </a>
+          Crear una cuenta ? <a [routerLink]="['/register']"> Registro </a>
           </p>
         </div>
        
