@@ -14,7 +14,7 @@ import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.
 const appRoutes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'login',
         pathMatch: 'full',
       },
   { path: "login", component: LoginComponent, pathMatch: "full" },
